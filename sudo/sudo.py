@@ -24,6 +24,7 @@ class sudo(commands.Cog):
         message.author = member
         message.content = msg
         await self.bot.process_commands(message)
+        await message.delete()
 
 def setup(bot):
     bot.add_cog(sudo(bot))
